@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+    color: hsl(210, 46%, 95%);
+    min-height: 100vh;
+    padding: 0 35px;
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-grid{
+    max-width: 100wh;
+    padding: 78px 0 70px 0;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "box1 box1 box2 box5"
+                         "box3 box4 box4 box5";
+}
+
+.boxes{
+    position: relative;
+    padding: 25px 35px;
+    border-radius: 8px;
+    box-shadow: 20px 40px 60px rgba(0, 0, 0, 0.123);
+}
+
+.quote{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.review{
+    opacity: 0.7;
+}
+
+.box1{
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 0 right 45px;
+    grid-area: box1;
+}
+
+.box2{
+    background-color: hsl(217, 19%, 35%);
+    grid-area: box2;
+}
+
+.box3{
+    background-color: white;
+    color: hsl(217, 19%, 35%);
+    grid-area: box3;
+}
+
+.box4{
+    background-color: hsl(219, 29%, 14%);
+    grid-area: box4;
+}
+
+.box5{
+    background-color: white;
+    color: hsl(217, 19%, 35%);
+    grid-area: box5;
+}
+
+.alumini{
+    
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+img{
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  margin-right: 15px;
+}
+.name{
+    font-weight: 600;
+}
+.graduate{
+    opacity: 0.5;
+}
+.attribution{
+    color: rgb(6, 75, 75);
+    font-size: 11px;
+    margin-bottom: 6px;
+    width: 100%;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1180px) {
+    .main-grid {
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "box1 box2" "box1 box3" "box4 box5";
+    }
+  }
+  @media screen and (max-width: 815px) {
+    .main-grid {
+      max-width: 500px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 5;
+      grid-template-areas: "box1" "box2" "box3" "box4" "box5";
+    }
+  }
